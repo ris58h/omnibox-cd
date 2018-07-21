@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "Omnibox Change Directory",
+    "description": "CD-like navigation for Omnibox.",
+    "version": "0.1",
+    "background": {
+        "scripts": ["cd.js", "background.js"],
+       "persistent": false
+    },
+    "omnibox": { "keyword" : "cd" },
+    "permissions": [
+        "tabs"
+    ]
+}
