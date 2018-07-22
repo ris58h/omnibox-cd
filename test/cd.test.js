@@ -7,6 +7,8 @@ describe("cd", () => {
         assert.equal(cd("http://8.8.8.8:8080/", "path"), "http://8.8.8.8:8080/path")
         assert.equal(cd("http://8.8.8.8:8080/ws", "path"), "http://8.8.8.8:8080/ws/path")
         assert.equal(cd("http://8.8.8.8:8080/ws/", "path"), "http://8.8.8.8:8080/ws/path")
+        assert.equal(cd("http://8.8.8.8:8080/ws?query", "path"), "http://8.8.8.8:8080/ws/path")
+        assert.equal(cd("http://8.8.8.8:8080/ws#hash", "path"), "http://8.8.8.8:8080/ws/path")
     })
 
     it("should resolve absolute path", () => {
